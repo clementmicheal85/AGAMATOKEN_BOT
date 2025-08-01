@@ -2,7 +2,7 @@ import os
 import asyncio
 import logging
 from web3 import Web3, WebSocketProvider
-from web3.middleware import geth_poa_middleware
+from web3.middleware.geth_poa import geth_poa_middleware
 from telegram import Update
 from telegram.constants import ParseMode
 from telegram.ext import Application, CommandHandler, ContextTypes, ApplicationBuilder
