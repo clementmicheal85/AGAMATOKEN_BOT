@@ -2,7 +2,7 @@ import os
 import asyncio
 import logging
 from web3 import Web3, WebSocketProvider
-from web3.middleware.geth_poa import geth_poa_middleware
+from web3.middleware import geth_poa_middleware
 from telegram import Update
 from telegram.constants import ParseMode
 from telegram.ext import Application, CommandHandler, ContextTypes, ApplicationBuilder
@@ -127,7 +127,7 @@ async def send_telegram_alert(bot_instance, tx_hash, amount, buyer_address):
             f"💰 *Amount*: {amount:.3f} BNB\n"
             f"👤 *Buyer*: `{buyer_address[:6]}...{buyer_address[-4:]}`\n"
             f"🔗 *Transaction*: [View on BscScan](https://bscscan.com/tx/{tx_hash})\n"
-            f"📈 *Become an early holder*: [Buy $AGAMA now!]({BSC_SCAN_TOKEN_URL})"
+            f"� *Become an early holder*: [Buy $AGAMA now!]({BSC_SCAN_TOKEN_URL})"
         )
 
         await bot_instance.send_photo(
@@ -233,3 +233,4 @@ if __name__ == "__main__":
         logger.info("Bot stopped by user.")
     except Exception as e:
         logger.critical(f"A critical error occurred in the main loop: {e}")
+�
